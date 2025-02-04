@@ -1,9 +1,9 @@
-//TODO: PIC-4
 use rand::Rng;
 
 struct SprintTeam {
     name: String,
     spaces_remaining: u8,
+    color: String,
 } 
 
 fn main() {
@@ -33,16 +33,19 @@ fn main() {
     let sprint_team_a  = SprintTeam { 
         name: "Team A".to_string(), 
         spaces_remaining: 7,
+        color: "Orange".to_string(),
     };
 
     let sprint_team_b = SprintTeam { 
         name: "Team B".to_string(), 
         spaces_remaining: 7,
+        color: "Green".to_string(),
     };
 
     let sprint_team_c = SprintTeam { 
         name: "Team C".to_string(), 
         spaces_remaining: 6,
+        color: "Blue".to_string(),
     };
 
     let mut teams = [sprint_team_a, sprint_team_b, sprint_team_c];
@@ -56,10 +59,11 @@ fn main() {
             if team.spaces_remaining > 0 {
                 team.spaces_remaining -= 1;
                 println!(
-                    "Student: {:<25}  Team: {:<10}  Remaining Spaces: {}",
+                    "Student: {:<25}  Team: {:<10}  Remaining Spaces: {} Color {}",
                     student,
                     team.name,
-                    team.spaces_remaining
+                    team.spaces_remaining,
+                    team.color
                 );
                 break;
             }
