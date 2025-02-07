@@ -1,5 +1,27 @@
 fn main() {
-    println!("This old man, he played one,\nBut he needs to play more!!");
+    // println!("This old man, he played one,\nBut he needs to play more!!");
+
+    let arr: [[&str; 2]; 10] = [
+        ["one", "on my thumb"],
+        ["two", "on my shoe"],
+        ["three", "on my knee"],
+        ["four", "on my door"],
+        ["five", "on my hive"],
+        ["six", "on my sticks"],
+        ["seven", "up in heaven"],
+        ["eight", " on my gate"],
+        ["nine", "on my spine"],
+        ["ten", "once again"],
+    ];
+    
+    for n in 0..10{
+        print!("This old man, he played {},
+He played knick-knack {};
+With a knick-knack paddywhack,
+Give the dog a bone,
+This old man came rolling home.",arr[n][0], arr[n][1]);
+    }
+
 }
 
 /* Lyrics to This Old Man
